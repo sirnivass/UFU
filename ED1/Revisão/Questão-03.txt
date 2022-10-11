@@ -1,0 +1,18 @@
+int a, b;
+int *P1, *P2, **P3;
+float *P4;
+// Quais das seguintes operações funcionam corretamente ? Explique o que ocorre noscasos corretos.
+a = 10;       // Atribui um valor à variável 'a'.
+b = &a;       // 'b' recebe o endereço de 'a'.
+P1 = a;       // O correto seria P1 = &a.
+a = &P1;      // P1 não é uma variável e sim Ponteiro, logo essa operação não tem sentido(pra mim); 'a' recebe endereço 'P1' (nem sei se é viável usar isso.às vezes é e eu que não sei).
+*P1 = &a;     // O correto é P1 = &a. Ponteiro de inteiro recebe o endereço da variável int 'a', possível e amplamente usado.Mas como está creio que não funciona, eu nunca usei assim. Deu erro quando testei
+&P1 = &a;     // Isso aqui não faz sentido pra mim. Endereço de P1 recebendo endereço de a... P1 é Ponteiro, não variável, não tem sentido.
+P4 = &a;      // P4 é um ponteiro float, não pode receber endereço de int.
+P4 = P1;      // Um ponteiro float apontando para um intero dá certo, mas não vejo sentido. Mas vai saber, alguém pode gostar de fazer isso. Mistérios irmão, mistério.
+P2 = P1 = &a; // P2 aponta para P1 que aponta para 'a'.
+*P1 = 20;     // Ponteiro de inteiro muda valor apontado, caso houvesse algum inteiro sendo apontado por P1, teria seu valor alterado.
+*P2 = *P1;    // Como os ponteiros já foram criados, isso deu erro, quando testei. O correto é P2 = P1
+*P3 = &P1;    // Erro! Não funciona. Não posso apontar ponteiro de ponteiro para um endereço de pondeiro. O correto é P3 = &P1, assim P3 receberia endereço de P1.
+P3 = &P2;     // Correto, P3 recebe endereço de P2.
+**P3 = *P1;   // Ponteiro de ponteiro 'P3' aponta(endereça) ao ponteiro 'P1'. Erro!
