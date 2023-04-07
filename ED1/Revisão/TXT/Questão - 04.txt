@@ -1,0 +1,9 @@
+Passagem por Valor:
+
+Quando escrevemos uma função, passamos os valores das variáveis por valor. Esse valor, no caso da questão 01, estavam na minha main().
+Na função, os valores não irão alterar o valor das variáveis declaras na main(ainda com o exemplo da questão 01.). 
+Por esse motivo, pude usar a variável M e M2 várias vezes, sem me preocupar com o "lixo" ou em zerar seu valor. Ela já estava zerada quando eu chamava a função.
+
+Passagem por Referência:
+
+Agora caso eu passe o valor por referência estou passando o "local" da variável, assim o que acontecer dentro da função que eu declarei, vai mudar o valor da variável dentro da minha main(Ainda usando a questão 01 como base.) as alterações prevalecem mesmo depois que eu terminar o procedimento.
